@@ -1,4 +1,4 @@
-package basic.WaterState;
+package B_B20_WaterState;
 
 public class WaterState {
     public static String getWaterState(double temperature) throws Exception {
@@ -11,13 +11,11 @@ public class WaterState {
         if(temperature <= 0) {
             return "solid";
         }
-        if(temperature > 0 && temperature < 100) {
+        else if(temperature > 0 && temperature < 100) {
             return "liquid";
         }
-        if(temperature >= 100) {
+        else
             return "gas";
-        }
-        throw new Exception("Shouldn't have got here!");
     }
 }
 

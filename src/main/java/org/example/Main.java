@@ -11,7 +11,7 @@ public class Main {
         CheckCredit person = new CheckCredit(dob, "Freddy May");
         try {
             System.out.println("Checking : " + person.getName() + ", Age: " + person.getAge());
-            CreditReturnStatus result =  person.checkCredit(1000, 24);
+            CreditReturnStatus result =  person.checkCredit(1000, 25);
             System.out.println(result.message);
             System.out.println(person.getResult().toString());
         }

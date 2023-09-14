@@ -38,25 +38,21 @@ public class CheckCredit {
         this.result = null;
     }
 
-    private Exception validatePerson() {
+    private void validatePerson() throws Exception {
         if(name.length() < 2) {
-            return new Exception("Name too short");
+            throw new Exception("Name too short");
         }
-        if(age <= 0) {
-            return new AgeException("Invalid age");
+        else if(age <= 0) {
+            throw new AgeException("Invalid age");
         }
-        if(this.age < 18) {
-            return new AgeException("Too young");
+        else if(this.age < 18) {
+            throw new AgeException("Too young");
         }
-        return null;
     }
 
     public CreditReturnStatus checkCredit(int creditSought, int duration) throws Exception {
         // Validation
-        Exception validation = validatePerson();
-        if(validation != null) {
-            throw validation;
-        }
+        validatePerson();
 
         // Prepare return object
         CreditReturnStatus response = new CreditReturnStatus();
@@ -64,28 +60,30 @@ public class CheckCredit {
 
         if (age < 26) {
             if(creditSought > 1000) {
-                response.message = "We only offer up to 1000 of credit between 18 and 25";
-                return response;
+                response.message = "We only offer up to 1000 of credit for 18 to 25 year olds";
             }
-            if(duration > 24) {
-                response.message = "We offer max 24 months of credit between 18 and 25";
-                return response;
+            else if(duration > 24) {
+                response.message = "We offer max 24 months of credit for 18 to 25 year olds";
+            }
+            else {
+                response.approved = true;
+                response.message = this.name + " : your credit has been approved";
             }
         }
         else {
             if(creditSought > 10000) {
-                response.message = "We only offer up to 10000 of credit";
-                return response;
+                response.message = "We only offer up to 10000 of credit if you're 26 or older";
             }
-            if(duration > 48) {
-                response.message = "We offer max 48 months of credit";
-                return response;
+            else if(duration > 48) {
+                response.message = "We offer max 48 months of credit if you're 26 or older";
+            }
+            else {
+                response.approved = true;
+                response.message = this.name + " : your credit has been approved";
             }
         }
-        response.approved = true;
-        response.message = this.name + " : your credit has been approved";
 
-        // We'll also set the rsult property so we can demonstrate Side Effects
+        // We'll also set the result property, so we can demonstrate Side Effects
         this.result = response;
 
         return response;
@@ -104,3 +102,28 @@ public class CheckCredit {
     }
 }
 
+/*
+
+The following code can be used in your generated Test Code to handle
+a Custom Assertion instead of inspecting the return values.
+
+// Custom Assertion #1 : use parameters
+private static void assertMyCustomAssertion1(CheckCredit instance, CreditReturnStatus result, CustomMatcherIsApprovedTestData data) {
+    // TODO implement Custom Assertion
+    // please implement your own custom assertion here
+    // you can find the parameters defined for your custom matcher under data.<name>CustomMatcher
+    // assertEquals(data.<name>CustomMatcher, result);
+    throw new UnsupportedOperationException();
+}
+
+// Custom Assertion #2 : use the Instance
+private static void assertMyCustomAssertion2(CheckCredit instance, CreditReturnStatus result, CustomMatcherIsApprovedTestData data) {
+    // TODO implement Custom Assertion
+    // please implement your own custom assertion here
+    // you can find the parameters defined for your custom matcher under data.<name>CustomMatcher
+    // assertEquals(data.<name>CustomMatcher, result);
+    throw new UnsupportedOperationException();
+}
+
+
+*/

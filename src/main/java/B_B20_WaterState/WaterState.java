@@ -5,10 +5,10 @@ public class WaterState {
         if(temperature <= -273.15) {
             // There's a deliberate mismatch here between the requirements
             // It should be < -273.15, not <=
-            // We'll use this to show a failed test
+            // We'll use this to show a test failing
             throw new Exception("Temperature is below absolute zero");
         }
-        if(temperature <= 0) {
+        else if(temperature <= 0) {
             return "solid";
         }
         else if(temperature > 0 && temperature < 100) {

@@ -5,5 +5,6 @@ meta:
   description: ""
   createdAt: null
   updatedAt: null
-presentation: "{\"collapsed\":false,\"position\":{\"x\":416,\"y\":490},\"testConfigurationOrder\"\
-  :[\"6d05f4ce-2c88-4f27-a291-bda3e150f4cf\"]}"
+presentation: "{\"collapsed\":false,\"position\":{\"x\":256,\"y\":416},\"testConfigurationOrder\"\
+  :[\"33bbeb0d-db6e-40bf-984c-4542fa7d66e5\",\"f4d0cce9-dc4b-4c8c-8369-1c3dfc28ef34\"\
+  ]}"

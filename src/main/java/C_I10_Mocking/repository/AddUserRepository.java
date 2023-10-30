@@ -5,9 +5,9 @@ import C_I10_Mocking.models.User;
 public class AddUserRepository implements IAddUserRepository {
 
     @Override
-    public void execute(User user) throws Exception {
-        // Simulates adding a user to a database
-        return;
+    public User execute(User user) throws Exception {
+        // Would add a user to a database
+        return user;
     }
 
 }

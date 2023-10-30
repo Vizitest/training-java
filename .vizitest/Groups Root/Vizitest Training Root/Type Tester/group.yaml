@@ -1,0 +1,13 @@
+---
+meta:
+  uid: "8de68c02-badb-4182-a9b5-0e10fef38f66"
+  title: "Type Tester"
+  description: "Simple RValue Testing"
+  createdAt: null
+  updatedAt: null
+presentation: "{\"collapsed\":false,\"position\":{\"x\":704,\"y\":416},\"testConfigurationOrder\"\
+  :[\"3118ddc9-341e-490b-84d0-3bffd8e2f3bb\",\"fad822c1-f3b7-4d64-9750-4677536ddeae\"\
+  ,\"e7a51cac-f9eb-41ec-a613-382acfdff0a7\",\"7824c0ab-c88d-4fca-84f0-502aa97a810c\"\
+  ,\"7b91801c-6c82-431f-8448-395320199bff\",\"1da115ad-8987-40db-ab2c-2ba0201049c9\"\
+  ,\"37e476ee-e6e6-46c4-b265-f3f3c4839f58\",\"40ec7c84-f823-453f-803d-c20f6748b276\"\
+  ,\"afd38703-c510-42bf-bae0-15db09e07410\"]}"

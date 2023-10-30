@@ -8,19 +8,24 @@ public class User {
     private String name;
     private Integer age;
     private String bio = "";
+
+    private boolean canDriveCar;
     private UUID uuid;
 
-    public User(String name, Integer age, String bio) {
+    public User(String name, Integer age, String bio, boolean canDriveCar) {
         this.name = name;
         this.age = age;
         this.bio = bio;
+        this.canDriveCar = canDriveCar;
         genUuid();
     }
 
+    public User(String name, Integer age, String bio) {
+        this(name, age, bio, false);
+    }
+
     public User(String name, Integer age) {
-        this.name = name;
-        this.age = age;
-        genUuid();
+        this(name, age, "");
     }
 
     public UUID getUuid() {
@@ -57,6 +62,14 @@ public class User {
 
     public void setBio(String bio) {
         this.bio = bio;
+    }
+
+    public boolean isCanDriveCar() {
+        return canDriveCar;
+    }
+
+    public void setCanDriveCar(boolean canDriveCar) {
+        this.canDriveCar = canDriveCar;
     }
 
     @Override

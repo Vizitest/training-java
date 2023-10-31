@@ -26,41 +26,16 @@ public class TypeTester {
         return myIntArray.length == 3;
     }
 
-    public static boolean testList(List<Money> myList) {
-        return myList.size() == 3;
+    public static List<Money> testList(List<Money> myList) {
+        return myList;
     }
 
-    public static boolean testEnum(Enum<Colors> myEnum) {
-        return myEnum.name() == "RED";
+    public static boolean testEnum(Colors myEnum) {
+        return myEnum == Colors.RED;
     }
 
     // COMPLEX
+    // Colors, Money and Transaction are in external Classes
+    // This example tests an indirect reference
 
-
-}
-
-class Money {
-    public String currencyCode;
-    public double amount;
-
-    Money(String currencyCode, double amount) {
-        this.currencyCode = currencyCode;
-        this.amount = amount;
-    }
-}
-
-class Transaction {
-    public String transactionId;
-    public Money money;
-
-    Transaction(String transactionId, Money money) {
-        this.transactionId = transactionId;
-        this.money = money;
-    }
-}
-
-enum Colors {
-    RED,
-    GREEN,
-    BLUE
 }

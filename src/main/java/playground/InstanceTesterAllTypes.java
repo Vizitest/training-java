@@ -12,7 +12,6 @@ public class InstanceTesterAllTypes {
     private Money inMoney;
     private Transaction inTransaction;
 
-
     public InstanceTesterAllTypes(int inInt, String inString, double inDouble, int[] inIntArray, List<Integer> inIntList, Colors inEnumColors, Money inMoney, Transaction inTransaction) {
         this.inInt = inInt;
         this.inString = inString;

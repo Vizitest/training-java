@@ -35,7 +35,7 @@ public class TypeTester {
     }
 
     // COMPLEX
-    // Colors, Money and Transaction are in external Classes
+    // Colors, Money and Transaction are in external Classes in this package
     // This example tests an indirect reference
 
 }

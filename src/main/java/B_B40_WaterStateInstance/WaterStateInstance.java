@@ -2,11 +2,11 @@ package B_B40_WaterStateInstance;
 
 public class WaterStateInstance {
 
-    private double temp;
+    private double temperature;
     private String state;
 
     WaterStateInstance(double temperature) {
-        this.temp = temperature;
+        this.temperature = temperature;
         if(temperature < -273.15) {
             this.state = "invalid temperature";
         }

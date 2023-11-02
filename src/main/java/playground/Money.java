@@ -15,5 +15,6 @@ public class Money {
     public String getCurrencyCode() {
         return this.currencyCode;
     }
+    public Money getMoney() {return this;}
 
 }

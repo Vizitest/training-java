@@ -4,7 +4,7 @@ import java.util.List;
 
 public class TypeTester {
 
-    // PRIMITIVES
+    // PRIMITIVE VALUES
     public static boolean testBoolean(boolean myBoolean) {
         return myBoolean == true;
     }
@@ -34,8 +34,8 @@ public class TypeTester {
         return myEnum == Colors.RED;
     }
 
-    // COMPLEX
-    // Colors, Money and Transaction are in external Classes in this package
-    // This example tests an indirect reference
+    // COMPLEX VALUES
+    // Refer to Money and Transaction in this package
+
 
 }

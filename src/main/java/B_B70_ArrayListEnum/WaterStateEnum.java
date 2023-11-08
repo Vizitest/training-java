@@ -1,6 +1,6 @@
 package B_B70_ArrayListEnum;
 
-public enum WaterState {
+public enum WaterStateEnum {
     SOLID,
     LIQUID,
     GAS,
